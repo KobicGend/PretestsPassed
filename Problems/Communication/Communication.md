@@ -17,7 +17,7 @@ Description 是题目关键词，以便于搜索题目，不会提示解题思�
 | *2100      | [2025 ECF K. Magically Marked Matching Master](https://qoj.ac/contest/3295/problem/16338) | First 根据给定的树，构造 01 串，Second 在线抉择每条边是否加入集合，须得到树的最大匹配 |                                 |
 | *2100      | [CF2168 Testing Round 20 CF2168C. Intercepting Butterflies](https://codeforces.com/problemset/problem/2168/C) | 用 5 位冗余码传输 15 位 01 串，jury 会随机翻转 1bit          |                                 |
 | *2400      | [2025 ECF L. Logical Resonance](https://qoj.ac/contest/3295/problem/16339) | First 根据给定的 pi<i 的有根树 S，构造一个 pi>i 的树 T，满足 S 的叶子都是 T 的非叶子，S 的非叶子都是 T 的叶子，Second 执行相反的构造 |                                 |
-| *2600      | [2025 沈阳 C. Buggy Painting Software II](https://qoj.ac/contest/2641/problem/14942) | First 根据给定数字，构造每个整数恰好出现三次的序列，jury 将序列用二划分映射成二进制序列，Second 还原数字 |                                 |
-| *2700      | [2026 深圳邀请 H. Telepathy](https://qoj.ac/contest/3588/problem/17760) | 给定 01 串 $S$，满足其中 1 的数量严格小于 0 的数量。First 必须将 $S$ 的某个 0 改为 1，得到 $S'$。Second 依据 $S'$ 还原 $S$。$|S| \leqslant 10^{6}$。 | [Link](2026ICPCShenzhenInvH.md) |
+| *2600      | [2025 沈阳 C. Buggy Painting Software II](https://qoj.ac/contest/2641/problem/14942) | First 给定 $N$ 个正整数 $X_{i} \in [1,M]$，为每个数构造一个长度为 $3 M$ 的序列，每个序列中 $1$ 到 $M$ 的整数恰好出现 3 次。Jury 独立地将每个序列映射成二进制序列。Second 从这些二进制序列中解密出每个 $X_{i}$。$N M \leqslant 10^{6}$。 | [Link](2025ICPCShenyangC.md)    |
+| *2700      | [2026 深圳邀请 H. Telepathy](https://qoj.ac/contest/3588/problem/17760) | 给定 01 串 $S$，满足其中 1 的数量严格小于 0 的数量。First 必须将 $S$ 的某个 0 改为 1，得到 $S'$。Second 依据 $S'$ 还原 $S$。 | [Link](2026ICPCShenzhenInvH.md) |
 | 2700       | [CF2237G. Send GCDs](https://codeforces.com/problemset/problem/2237/G) | First 根据给定序列，构造新序列，Second 询问两项的 gcd 还原序列 |                                 |
 | 2700       | [CF2163E. Plegma](https://codeforces.com/problemset/problem/2163/E) | First 根据给定 01 矩阵，选择一行一列传输，Second 判断原矩阵的四连通性 |                                 |
