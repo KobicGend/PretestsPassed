@@ -23,7 +23,7 @@
 |  | CCPC 重庆 | 清华 | / | 数论-同余方程<br>exgcd | 数论-欧拉函数<br>DP（状压） | / |
 |  | CCPC Final |  | 拓扑排序 | (暂未整理) | / | / |
 | 2025 | EC online I |  | / | 单源最短路<br>DP（树上） | 树上背包 | / |
-|  | EC online II | 杭电 | 计数-二项式定理 | 计数-Lagrange 插值<br>计数-容斥<br>计数-求解递推数列（手算/快速幂） | DP（树上） | / |
+|  | EC online II | 杭电 | 计数-二项式定理 | 计数-Lagrange 插值<br>计数-容斥<br>计数-求解递推数列 | DP（树上） | / |
 |  | CC online | 复旦 | / | 字符串匹配<br>SG 定理<br>Hash | 最小生成树 | / |
 |  | ICPC 西安 | cfz | 二分/双指针 | DP（树上）<br>LCA | 二分/双指针<br>DP（状态机）<br>网络流 | / |
 |  | CCPC 女赛 | 杭电 | 判断素数 | 拆点（分层图） | RMQ<br>DP（期望） | / |
