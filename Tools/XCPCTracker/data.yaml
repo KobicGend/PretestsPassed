@@ -1,0 +1,305 @@
+- year: 2024
+  contest: "CC online"
+  setter: ""
+  problems:
+    Easy: []
+    Medium: ["异或线性基", "DP（区间）", "数学期望"]
+    Hard: ["网络流"]
+    Expert: []
+
+- year: 2024
+  contest: "EC online I"
+  setter: ""
+  problems:
+    Easy: []
+    Medium: ["单调栈/Cartesian Tree"]
+    Hard: ["SCC 缩点", "最小瓶颈路", "线性代数"]
+    Expert: []
+
+- year: 2024
+  contest: "EC online II"
+  setter: ""
+  problems:
+    Easy: []
+    Medium: ["数学期望", "辗转相除加速辗转相减"]
+    Hard: ["拆点（分层图）"]
+    Expert: []
+
+- year: 2024
+  contest: "ICPC 成都"
+  setter: "电子科大"
+  problems:
+    Easy: []
+    Medium: ["DP", "三维前缀和", "线段树"]
+    Hard: ["DP（树上）", "树上前缀和", "网络流"]
+    Expert: []
+
+- year: 2024
+  contest: "ICPC 杭州"
+  setter: "SUA"
+  problems:
+    Easy: ["并查集"]
+    Medium: ["枚举约数", "ST 表", "Cartesian Tree"]
+    Hard: ["SCC 缩点"]
+    Expert: ["线段树二分", "高维前缀和"]
+
+- year: 2024
+  contest: "ICPC 香港"
+  setter: "浙江大学"
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
+
+- year: 2024
+  contest: "ICPC 昆明"
+  setter: "北理黑冰茶"
+  problems:
+    Easy: ["极角排序"]
+    Medium: ["异或线性基", "最短路", "数论"]
+    Hard: ["Hash", "线段树"]
+    Expert: ["数论-筛法"]
+
+- year: 2024
+  contest: "ICPC 南京"
+  setter: "SUA"
+  problems:
+    Easy: []
+    Medium: []
+    Hard: ["树的重心", "计算几何基础"]
+    Expert: ["多项式", "min-max反演"]
+
+- year: 2024
+  contest: "ICPC 上海"
+  setter: ""
+  problems:
+    Easy: ["二分"]
+    Medium: []
+    Hard: ["VBCC"]
+    Expert: ["树上数据结构", "CDQ分治多项式乘法"]
+
+- year: 2024
+  contest: "ICPC 沈阳"
+  setter: "华为云"
+  problems:
+    Easy: []
+    Medium: ["DP（状压）", "最短路"]
+    Hard: ["计算几何基础", "高精度/Hash", "SCC 缩点"]
+    Expert: []
+
+- year: 2024
+  contest: "EC final"
+  setter: ""
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
+
+- year: 2024
+  contest: "CCPC 女赛"
+  setter: "杭电"
+  problems:
+    Easy: []
+    Medium: ["并查集"]
+    Hard: ["DP（数位）", "DP（背包）"]
+    Expert: ["后缀数组/后缀自动机", "DP（背包）", "数论和式变换"]
+
+- year: 2024
+  contest: "CCPC 哈尔滨"
+  setter: "电子科大"
+  problems:
+    Easy: []
+    Medium: ["SCC 缩点", "线段树", "二分"]
+    Hard: ["数学期望", "DP（树上）", "凸包"]
+    Expert: ["DP（背包）", "多项式暴力乘除"]
+
+- year: 2024
+  contest: "CCPC 济南"
+  setter: ""
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
+
+- year: 2024
+  contest: "CCPC 郑州"
+  setter: "南大"
+  problems:
+    Easy: []
+    Medium: ["最短路", "浮点二分"]
+    Hard: ["Hash", "线段树"]
+    Expert: ["DP（期望）"]
+
+- year: 2024
+  contest: "CCPC 重庆"
+  setter: "清华"
+  problems:
+    Easy: []
+    Medium: ["数论-同余方程", "exgcd"]
+    Hard: ["数论-欧拉函数", "DP（状压）"]
+    Expert: []
+
+- year: 2024
+  contest: "CCPC Final"
+  setter: ""
+  problems:
+    Easy: ["拓扑排序"]
+    Medium: ["(暂未整理)"]
+    Hard: []
+    Expert: []
+
+- year: 2025
+  contest: "EC online I"
+  setter: ""
+  problems:
+    Easy: []
+    Medium: ["单源最短路", "DP（树上）"]
+    Hard: ["树上背包"]
+    Expert: []
+
+- year: 2025
+  contest: "EC online II"
+  setter: "杭电"
+  problems:
+    Easy: ["计数-二项式定理"]
+    Medium: ["计数-Lagrange 插值", "计数-容斥", "计数-求解递推数列"]
+    Hard: ["DP（树上）"]
+    Expert: []
+
+- year: 2025
+  contest: "CC online"
+  setter: "复旦"
+  problems:
+    Easy: []
+    Medium: ["字符串匹配", "SG 定理", "Hash"]
+    Hard: ["最小生成树"]
+    Expert: []
+
+- year: 2025
+  contest: "ICPC 西安"
+  setter: "cfz"
+  problems:
+    Easy: ["二分/双指针"]
+    Medium: ["DP（树上）", "LCA"]
+    Hard: ["二分/双指针", "DP（状态机）", "网络流"]
+    Expert: []
+
+- year: 2025
+  contest: "CCPC 女赛"
+  setter: "杭电"
+  problems:
+    Easy: ["判断素数"]
+    Medium: ["拆点（分层图）"]
+    Hard: ["RMQ", "DP（期望）"]
+    Expert: []
+
+- year: 2025
+  contest: "ICPC 成都"
+  setter: "电子科大"
+  problems:
+    Easy: []
+    Medium: ["倍增/快速幂", "树上启发式合并"]
+    Hard: ["最短路", "线段树", "滑动窗口"]
+    Expert: []
+
+- year: 2025
+  contest: "ICPC 武汉"
+  setter: "北理黑冰茶"
+  problems:
+    Easy: []
+    Medium: ["行列式"]
+    Hard: ["01 字典树"]
+    Expert: ["DP"]
+
+- year: 2025
+  contest: "CCPC 哈尔滨"
+  setter: "哈工大"
+  problems:
+    Easy: ["数论基础+gcd 性质"]
+    Medium: ["最短路"]
+    Hard: ["Manacher"]
+    Expert: ["bitset 卷积 / FFT 计数"]
+
+- year: 2025
+  contest: "ICPC 南京"
+  setter: "SUA"
+  problems:
+    Easy: []
+    Medium: ["极角排序"]
+    Hard: ["并查集", "位运算", "凸壳", "二分", "DP（背包）", "DP（期望）"]
+    Expert: []
+
+- year: 2025
+  contest: "CCPC 济南"
+  setter: "中山大学"
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
+
+- year: 2025
+  contest: "ICPC 沈阳"
+  setter: "华为云"
+  problems:
+    Easy: []
+    Medium: []
+    Hard: ["枚举子集", "DP（背包）", "Minkowski Sum"]
+    Expert: []
+
+- year: 2025
+  contest: "CCPC 郑州"
+  setter: "浙江大学"
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
+
+- year: 2025
+  contest: "ICPC 上海"
+  setter: "清华大学"
+  problems:
+    Easy: ["DP（状压）"]
+    Medium: ["异或线性基"]
+    Hard: []
+    Expert: []
+
+- year: 2025
+  contest: "CCPC 重庆"
+  setter: "复旦大学"
+  problems:
+    Easy: []
+    Medium: ["二分", "树上数据结构"]
+    Hard: ["KMP"]
+    Expert: []
+
+- year: 2025
+  contest: "ICPC 香港"
+  setter: ""
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
+
+- year: 2025
+  contest: "EC final"
+  setter: "SUA"
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
+
+- year: 2025
+  contest: "CCPC Final"
+  setter: ""
+  problems:
+    Easy: ["(暂未整理)"]
+    Medium: []
+    Hard: []
+    Expert: []
