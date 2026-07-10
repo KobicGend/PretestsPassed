@@ -1,0 +1,35 @@
+name: Auto Generate XCPC Tables
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install pyyaml
+
+    - name: Run script
+      run: |
+        cd Tools/XCPCTracker
+        python generate.py
+
+    - name: Commit and Push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "auto: update XCPC tables [skip ci]"
+        file_pattern: 'Tools/XCPCTracker/INDEX.md Tools/XCPCTracker/TAGS.md'
