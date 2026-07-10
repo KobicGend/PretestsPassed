@@ -50,7 +50,7 @@ def generate_markdown():
             tags = problems_dict.get(diff) or []
             
             if not tags:
-                cells[diff] = "/"  # 空白默认填 /
+                cells[diff] = ""  # 空白默认填 /
             else:
                 cells[diff] = "<br>".join(tags)
                 
