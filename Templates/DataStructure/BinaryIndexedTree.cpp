@@ -68,3 +68,48 @@ public:
         return i + 1; // in range [0, N + 1], matching std::lower_bound() - begin() on a 0-padded prefix array
     }
 };
+
+// ============================================================================
+// Balanced Binary Search Tree (built on BinaryIndexedTree)
+// Assumes values are pre-discretized into 0-based indices in range [0, N)
+
+template <typename T = int>
+class BalancedBinarySearchTree {
+    int N;
+    BinaryIndexedTree<T> tree;
+
+public:
+    BalancedBinarySearchTree(int N = 0) : N(N), tree(N) {}
+
+    // Insert element O(log N)
+    void insert(int x, const T& v = 1) {
+        tree.add(x, v);
+    }
+
+    // Erase element O(log N)
+    void erase(int x, const T& v = 1) {
+        tree.add(x, -v);
+    }
+
+    // Rank query O(log N): returns the 1-based rank of element x (elements strictly smaller than x + 1)
+    T rank(int x) const {
+        return tree(x) + 1;
+    }
+
+    // K-th query O(log N): returns the 0-based index of the k-th (1-based) smallest element
+    int kth(T k) const {
+        return tree.lower_bound(k) - 1;
+    }
+
+    // Predecessor query O(log N): returns the largest element strictly smaller than x, or -1 if none
+    int prev(int x) const {
+        T cnt = tree(x);
+        return cnt > 0 ? kth(cnt) : -1;
+    }
+
+    // Successor query O(log N): returns the smallest element strictly greater than x, or -1 if none
+    int next(int x) const {
+        T cnt = tree(x + 1);
+        return cnt < tree(N) ? kth(cnt + 1) : -1;
+    }
+};
