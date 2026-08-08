@@ -149,7 +149,7 @@ private:
 // Endomorphism Monoid (Lazy Tag Structure)
 struct End {
     // Composition of two tags
-    End& operator *= (const End& f) {
+    End& operator *= ([[maybe_unused]] const End& f) {
         // --------------------------------
         // write here
         
@@ -161,7 +161,7 @@ struct End {
 // Data Monoid (Node Value Structure)
 struct Monoid {
     // Action of tag on data
-    Monoid& operator *= (const End& f) {
+    Monoid& operator *= ([[maybe_unused]] const End& f) {
         // --------------------------------
         // write here
         
@@ -171,7 +171,7 @@ struct Monoid {
 };
 
 // Pull/Merge operation for two data nodes
-Monoid operator + (const Monoid& l, const Monoid& r) {
+Monoid operator + ([[maybe_unused]] const Monoid& l, [[maybe_unused]] const Monoid& r) {
     // --------------------------------
     // write here
     

@@ -124,7 +124,7 @@ struct Monoid {
 };
 
 // Pull/Merge operation for two data nodes
-Monoid operator + (const Monoid& l, const Monoid& r) {
+Monoid operator + ([[maybe_unused]] const Monoid& l, [[maybe_unused]] const Monoid& r) {
     // --------------------------------
     // write here
     
