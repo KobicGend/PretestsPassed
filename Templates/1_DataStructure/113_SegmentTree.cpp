@@ -1,16 +1,16 @@
 // ============================================================================
-// Segment Tree
+// Lazy Segment Tree
 
 #include <vector>
 #include <utility>
 #include <numeric>
 #include <optional>
 
-template <class Monoid>
+template <class Monoid, class End>
 struct SegmentTree {
     SegmentTree(int N, const Monoid& elem = Monoid()) : SegmentTree(std::vector<Monoid>(N, elem)) {}
     
-    SegmentTree(const std::vector<Monoid>& a) : N(a.size()), elem(4 * N) {
+    SegmentTree(const std::vector<Monoid>& a) : N(a.size()), elem(4 * N), ends(4 * N) {
         build(1, 0, N, a);
     }
     
@@ -19,6 +19,14 @@ struct SegmentTree {
         if (id < 0 || id >= N) return;
         operate(1, 0, N, id, id + 1, [&](int o) {
             apply_val(o, x);
+        });
+    }
+    
+    // Range update
+    void update(int L, int R, const End& x) {
+        if (L >= R) return;
+        operate(1, 0, N, L, R, [&](int o) {
+            apply_tag(o, x);
         });
     }
     
@@ -50,14 +58,32 @@ struct SegmentTree {
 private:
     int N;
     std::vector<Monoid> elem;
+    std::vector<std::optional<End>> ends; // Using optional to automatically manage identity state
     
     #define lc (o << 1)
     #define rc (o << 1 | 1)
     #define m std::midpoint(l, r)
     
-    // Apply point assignment
+    // Apply point assignment and clear lazy tag
     void apply_val(int o, const Monoid& x) {
         elem[o] = x;    
+        ends[o] = std::nullopt;
+    }
+    
+    // Apply lazy tag to data and compose with existing tag
+    void apply_tag(int o, const End& x) {
+        elem[o] *= x;
+        if (!ends[o]) ends[o] = x;
+        else *ends[o] *= x;
+    }
+    
+    // Push lazy tag down to children
+    void push(int o) {
+        if (ends[o]) {
+            apply_tag(lc, *ends[o]);
+            apply_tag(rc, *ends[o]);
+            ends[o] = std::nullopt;
+        }
     }
     
     // Pull values from children up to parent
@@ -77,23 +103,33 @@ private:
     }
     
     // Core traversal helper for updates and queries
-    template <class Callback>
-    void operate(int o, int l, int r, int L, int R, Callback&& cb) {
-        if (r <= L || R <= l) return;
+    template <class Cb>
+    void operate(int o, int l, int r, int L, int R, Cb&& cb) {
+        if (r <= L || R <= l) {
+            return;
+        }
         if (L <= l && r <= R) {
             cb(o); 
             return;
         }
-        operate(lc, l, m, L, R, std::forward<Callback>(cb));
-        operate(rc, m, r, L, R, std::forward<Callback>(cb));
+        push(o);
+        operate(lc, l, m, L, R, std::forward<Cb>(cb));
+        operate(rc, m, r, L, R, std::forward<Cb>(cb));
         pull(o);
     }
     
     template <class F>
     int findf(int o, int l, int r, int L, int R, F&& pred) {
-        if (l >= R || r <= L) return N;
-        if (l >= L && r <= R && !pred(elem[o])) return N;
-        if (r - l == 1) return l;
+        if (l >= R || r <= L) {
+            return N;
+        }
+        if (l >= L && r <= R && !pred(elem[o])) {
+            return N;
+        }
+        if (r - l == 1) {
+            return l;
+        }
+        push(o);
         int res = findf(lc, l, m, L, R, pred);
         if (res == N) {
             res = findf(rc, m, r, L, R, pred);
@@ -103,9 +139,16 @@ private:
     
     template <class F>
     int findl(int o, int l, int r, int L, int R, F&& pred) {
-        if (l >= R || r <= L) return -1;
-        if (l >= L && r <= R && !pred(elem[o])) return -1;
-        if (r - l == 1) return l;
+        if (l >= R || r <= L) {
+            return -1;
+        }
+        if (l >= L && r <= R && !pred(elem[o])) {
+            return -1;
+        }
+        if (r - l == 1) {
+            return l;
+        }
+        push(o);
         int res = findl(rc, m, r, L, R, pred);
         if (res == -1) {
             res = findl(lc, l, m, L, R, pred);
@@ -117,10 +160,28 @@ private:
     #undef m
 };
 
+// Endomorphism Monoid (Lazy Tag Structure)
+struct End {
+    // Composition of two tags
+    End& operator *= ([[maybe_unused]] const End& f) {
+        // --------------------------------
+        // write here
+        
+        // --------------------------------
+        return *this;
+    }
+};
+
 // Data Monoid (Node Value Structure)
 struct Monoid {
     // Action of tag on data
-    
+    Monoid& operator *= ([[maybe_unused]] const End& f) {
+        // --------------------------------
+        // write here
+        
+        // --------------------------------
+        return *this;
+    }
 };
 
 // Pull/Merge operation for two data nodes
